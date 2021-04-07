@@ -6,8 +6,11 @@ def process():
   f.close()
 
   last = len(quotes)-1
-  rnd = random.randint(0, last)
-  print(quotes[rnd])
+  numberOfQuotes = random.randint(0, last)
+
+  for x in range(numberOfQuotes):
+    quoteIndex = random.randint(0, last)
+    print(quotes[quoteIndex].removesuffix("\n"))
 
 if __name__== "__main__":
   process()
